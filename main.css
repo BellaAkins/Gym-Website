@@ -1,0 +1,542 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 1.5em;
+  font-family: "Poppins", sans-serif;
+  background: #111317;
+  color: #fff;
+}
+body .hero-img {
+  width: 100%;
+  height: 100vh;
+  background: url(body.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position-x: 20%;
+  background-position-y: 20%;
+  z-index: -1;
+  animation: Bellaintroload 3s forwards;
+}
+body header {
+  display: flex;
+  justify-content: space-between;
+}
+body header .logo {
+  color: #8a4fff;
+  font-size: 2rem;
+}
+body header .logo span {
+  color: #f2f2f2;
+}
+body header nav {
+  position: fixed;
+  background-color: white;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+body header nav .close {
+  float: right;
+  margin: 2em;
+}
+body header nav ul {
+  padding: 0;
+  margin-top: 8em;
+}
+body header nav ul a {
+  padding: 0.75em 2em;
+  display: block;
+  color: #111317;
+  font-weight: 400;
+}
+body header nav ul a:hover {
+  background: #8a4fff;
+  color: #fff;
+}
+body .hero img {
+  display: block;
+  margin: 0 auto;
+  width: 45vh;
+}
+body .hero h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+body .hero h1 span {
+  color: #8a4fff;
+}
+body .hero p {
+  font-size: 0.9rem;
+  line-height: 200%;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+body .hero button {
+  background: #8a4fff;
+  padding: 1em 4em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 3em;
+}
+body .hero button:hover {
+  background: #fff;
+  color: #8a4fff;
+  letter-spacing: 1.5px;
+}
+body svg {
+  width: 2.3em;
+  cursor: pointer;
+}
+body .open-nav {
+  transform: translateX(0);
+}
+body .program-section h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #8a4fff;
+}
+body .program-section .program-card {
+  margin-bottom: 5em;
+}
+body .program-section .program-card img {
+  width: 50px;
+}
+body .program-section .program-card .physical-fitness,
+body .program-section .program-card .strength {
+  margin-top: 20px;
+  background: #000000;
+  padding: 1.5em;
+  border-radius: 15px;
+}
+body .program-section .program-card .physical-fitness:hover,
+body .program-section .program-card .strength:hover {
+  border: 1px solid #8a4fff;
+}
+body .program-section .program-card .physical-fitness button,
+body .program-section .program-card .strength button {
+  background: #8a4fff;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  color: #fff;
+  cursor: pointer;
+}
+body .program-section .program-card .physical-fitness button:hover,
+body .program-section .program-card .strength button:hover {
+  background: #fff;
+  color: #8a4fff;
+  letter-spacing: 1.5px;
+}
+body .pricing-section h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #8a4fff;
+}
+body .pricing-section p {
+  font-size: 1rem;
+  line-height: 200%;
+  letter-spacing: 1px;
+}
+body .pricing-section .pricing-card img {
+  width: 25px;
+}
+body .pricing-section .basic-plan {
+  margin-top: 20px;
+  background: #000000;
+  padding: 1.5em;
+  border-radius: 15px;
+}
+body .pricing-section .basic-plan:hover {
+  border: 2px solid #8a4fff;
+}
+body .pricing-section .basic-plan h3 {
+  margin-top: 5em;
+  font-weight: 100;
+}
+body .pricing-section .basic-plan .price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: -0.5em;
+}
+body .pricing-section .basic-plan .join-now {
+  border: 2px solid #8a4fff;
+  text-align: center;
+  padding: 1em;
+}
+body .pricing-section .plan-image {
+  display: flex;
+  gap: 15px;
+}
+body .about-section img {
+  width: 45vh;
+}
+body .about-section h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #8a4fff;
+}
+body .about-section .image-flex img {
+  width: 35px;
+}
+body .about-section .image-flex .personal-trainer {
+  display: flex;
+  gap: 25px;
+}
+body .review-section h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #8a4fff;
+  font-size: 2rem;
+}
+body .review-section svg {
+  width: 35px;
+}
+body .review-section h2 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+body .review-section .review-card .first-review {
+  margin-bottom: 2em;
+  border: 2px solid #f2f2f2;
+  border-radius: 20px;
+  padding: 2em;
+}
+body .review-section .review-card .first-review:hover {
+  border: 2px solid #8a4fff;
+}
+body .review-section .text {
+  font-size: 1.2rem;
+}
+body .footer {
+  background: #000000;
+  padding: 0.5em;
+}
+body .footer .footer-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+body .footer .footer-col .logo {
+  color: #8a4fff;
+  font-size: 1.4rem;
+}
+body .footer .footer-col .logo span {
+  color: #f2f2f2;
+}
+body .footer .footer-col p {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  letter-spacing: 0.001px;
+}
+body .footer .footer-col .socials {
+  display: block;
+  margin: 0 auto;
+  padding: 1.3em;
+}
+body .footer .footer-col .socials svg {
+  width: 35px;
+}
+body .footer .title {
+  font-size: 1.3rem;
+}
+body .footer li {
+  padding: 0.3rem;
+}
+body .footer li a {
+  color: #ffffff;
+}
+body .footer li a:hover {
+  color: #8a4fff;
+}
+body .footer .footer-bar {
+  font-size: 0.9rem;
+  text-align: center;
+}
+body .footer .footer-bar span {
+  color: #8a4fff;
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 3em;
+  }
+  body .hero-img {
+    width: 100%;
+    height: 63vh;
+    background: url(body.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    z-index: -1;
+    animation: Bellaintroload 3s forwards;
+  }
+  body section.hero h1 {
+    font-size: 3.9rem;
+    margin-top: 1.5em;
+    line-height: 3.3rem;
+  }
+  body section.hero p {
+    margin-top: 3em;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  body .about-section .about-img {
+    display: block;
+    margin: 0 auto;
+    width: 55vh;
+  }
+  body header {
+    display: flex;
+    justify-content: space-between;
+  }
+  body header .logo {
+    color: #8a4fff;
+    font-size: 2.4rem;
+  }
+  body header .logo span {
+    color: #f2f2f2;
+  }
+  body header nav {
+    position: fixed;
+    background-color: white;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  body header nav .close {
+    float: right;
+    margin: 2em;
+  }
+  body header nav ul {
+    padding: 0;
+    margin-top: 8em;
+  }
+  body header nav ul a {
+    padding: 1.85em 2.5em;
+    display: block;
+    color: #111317;
+    font-weight: 500;
+    font-size: 1.45rem;
+  }
+  body header nav ul a:hover {
+    background: #8a4fff;
+    color: #fff;
+  }
+  body .program-section {
+    margin-top: 7em;
+  }
+  body .program-section h1 {
+    padding: 0.2em;
+    margin: 0.5em;
+  }
+  body .program-section .program-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+  body .program-section .program-card .strength,
+  body .program-section .program-card .physical-fitness {
+    border: 2px solid #fff;
+    padding: 4em;
+  }
+}
+@media only screen and (min-width: 920px) {
+  body {
+    margin: 0;
+  }
+  body .hero-img {
+    width: 50%;
+    height: 100%;
+    right: 0;
+    left: unset;
+    width: 42em;
+  }
+  body .menu,
+  body .close {
+    display: none;
+  }
+  body header {
+    padding: 10px;
+  }
+  body header .logo {
+    margin-top: 15px;
+    margin-left: 2em;
+    font-size: 1.5em;
+  }
+  body header nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  body header nav ul {
+    display: flex;
+    margin: 0;
+  }
+  body header nav ul a {
+    color: #fff;
+    padding: 5em, 1.5em;
+    font-size: 1em;
+  }
+  body header nav ul a:hover {
+    background: none;
+    text-decoration: underline;
+  }
+  body header nav ul .btn {
+    background: #8a4fff;
+    padding: 1em 2em;
+    margin: 1em;
+    border-radius: 15px;
+  }
+  body header nav ul .btn:hover {
+    background: #fff;
+    color: #8a4fff;
+    text-decoration: none;
+  }
+  body .hero {
+    height: auto;
+    width: 40%;
+    margin-top: -4.7em;
+    padding: 3em;
+  }
+  body .hero h1 {
+    font-size: 6em;
+    margin-top: 5em;
+    line-height: 3.3rem;
+  }
+  body .hero .hero-paragraph {
+    color: #ffffff;
+  }
+  body .program-section h1 {
+    padding: 0.5em;
+  }
+  body .program-section .program-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 1em;
+  }
+  body .program-section .program-card .strength,
+  body .program-section .program-card .physical-fitness {
+    border: 2px solid #fff;
+  }
+  body .pricing-section {
+    background: #000000;
+  }
+  body .pricing-section h1 {
+    padding: 1em;
+  }
+  body .pricing-section p.subhead {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  body .pricing-section .pricing-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 3em;
+    gap: 2em;
+    text-align: center;
+  }
+  body .pricing-section .pricing-card .basic-plan {
+    border: 2px solid #fff;
+  }
+  body .about-section img {
+    width: 10vh;
+    height: 10vh;
+  }
+  body .about-section h1 {
+    padding: 0.5em;
+  }
+  body .about-section p.subhead {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5em;
+  }
+  body .about-section .about-img {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+  body .about-section .image-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    background: #111317;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 0.2em;
+    margin: 3em;
+    position: absolute;
+    left: 10px;
+    bottom: -2700px;
+  }
+  body .about-section .image-card:hover {
+    border: 2px solid #8a4fff;
+  }
+  body .review-section {
+    margin-top: 19em;
+    margin-bottom: 10em;
+  }
+  body .review-section .review-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 3em;
+  }
+  body .review-section .review-card .first-review {
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    padding: 1em;
+    text-align: center;
+  }
+  body .review-section .review-card .first-review:hover {
+    background: #8a4fff;
+    border: none;
+    color: #000000;
+    font-weight: 500;
+  }
+  body .review-section .review-card svg path {
+    fill: #fff;
+  }
+  body .footer {
+    padding: 2.3em;
+  }
+  body .footer .footer-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body .footer .footer-bar p {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=main.css.map */
