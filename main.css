@@ -84,9 +84,10 @@ body .hero h1 span {
 }
 body .hero p {
   font-size: 0.9rem;
-  line-height: 200%;
+  line-height: 30px;
   text-align: justify;
   letter-spacing: 1px;
+  margin-bottom: 30px;
 }
 body .hero button {
   background: #8a4fff;
@@ -284,7 +285,7 @@ body .footer .footer-bar span {
   }
   body .hero-img {
     width: 100%;
-    height: 63vh;
+    height: 53vh;
     background: url(body.jpg);
     background-size: cover;
     position: absolute;
@@ -433,10 +434,11 @@ body .footer .footer-bar span {
   body .hero h1 {
     font-size: 6em;
     margin-top: 5em;
-    line-height: 3.3rem;
   }
   body .hero .hero-paragraph {
     color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
   }
   body .program-section h1 {
     padding: 0.5em;
@@ -495,11 +497,8 @@ body .footer .footer-bar span {
     background: #111317;
     border: 2px solid #ffffff;
     color: #ffffff;
-    padding: 0.2em;
-    margin: 3em;
-    position: absolute;
-    left: 10px;
-    bottom: -2700px;
+    width: 1200px;
+    margin: 0 auto;
   }
   body .about-section .image-card:hover {
     border: 2px solid #8a4fff;
@@ -538,5 +537,15 @@ body .footer .footer-bar span {
   }
   body .footer .footer-bar p {
     font-size: 1.5rem;
+  }
+}
+@keyframes Bellaintroload {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 }/*# sourceMappingURL=main.css.map */
